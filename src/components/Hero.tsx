@@ -12,7 +12,7 @@ interface HeroImage {
 export const Hero = () => {
   const [heroImages, setHeroImages] = useState<HeroImage[]>([]);
   const [currentIndex, setCurrentIndex] = useState(0);
-  const [artistName, setArtistName] = useState("Winxel ( Yna )*");
+  const [artistName, setArtistName] = useState("Winxel ( Yna )");
 
   useEffect(() => {
     fetchHeroData();
@@ -49,7 +49,7 @@ export const Hero = () => {
       .single();
 
     if (images) setHeroImages(images);
-    if (settings) setArtistName(settings.value || "Winxel ( Yna )*");
+    if (settings) setArtistName(settings.value || "Winxel ( Yna )");
   };
 
   useEffect(() => {

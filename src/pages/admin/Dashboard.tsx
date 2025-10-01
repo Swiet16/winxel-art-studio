@@ -2,7 +2,7 @@ import { useState, useEffect } from "react";
 import { Navigate } from "react-router-dom";
 import { supabase } from "@/integrations/supabase/client";
 import { Sidebar, SidebarContent, SidebarGroup, SidebarGroupContent, SidebarGroupLabel, SidebarMenu, SidebarMenuButton, SidebarMenuItem, SidebarProvider, SidebarTrigger } from "@/components/ui/sidebar";
-import { Home, Image, Briefcase, Newspaper, Mail, Settings, LogOut } from "lucide-react";
+import { Home, Image, Briefcase, Newspaper, Mail, Settings, LogOut, Users } from "lucide-react";
 import { NavLink, Outlet, useNavigate } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { toast } from "sonner";
@@ -13,6 +13,7 @@ const menuItems = [
   { title: "Portfolio", url: "/admin/portfolio", icon: Briefcase },
   { title: "News", url: "/admin/news", icon: Newspaper },
   { title: "Messages", url: "/admin/messages", icon: Mail },
+  { title: "Users", url: "/admin/users", icon: Users },
   { title: "Settings", url: "/admin/settings", icon: Settings },
 ];
 

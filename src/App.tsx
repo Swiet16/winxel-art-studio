@@ -4,6 +4,8 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Index from "./pages/Index";
+import Gallery from "./pages/Gallery";
+import About from "./pages/About";
 import Auth from "./pages/Auth";
 import Dashboard from "./pages/admin/Dashboard";
 import Overview from "./pages/admin/Overview";
@@ -12,6 +14,7 @@ import PortfolioManagement from "./pages/admin/PortfolioManagement";
 import NewsManagement from "./pages/admin/NewsManagement";
 import Messages from "./pages/admin/Messages";
 import Settings from "./pages/admin/Settings";
+import UserManagement from "./pages/admin/UserManagement";
 import NotFound from "./pages/NotFound";
 
 const queryClient = new QueryClient();
@@ -24,6 +27,8 @@ const App = () => (
       <BrowserRouter>
         <Routes>
           <Route path="/" element={<Index />} />
+          <Route path="/gallery" element={<Gallery />} />
+          <Route path="/about" element={<About />} />
           <Route path="/auth" element={<Auth />} />
           <Route path="/admin" element={<Dashboard />}>
             <Route index element={<Overview />} />
@@ -32,6 +37,7 @@ const App = () => (
             <Route path="news" element={<NewsManagement />} />
             <Route path="messages" element={<Messages />} />
             <Route path="settings" element={<Settings />} />
+            <Route path="users" element={<UserManagement />} />
           </Route>
           <Route path="*" element={<NotFound />} />
         </Routes>
